@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<fragment xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:map="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/map"
+    android:name="com.google.android.gms.maps.SupportMapFragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".BusLocationActivity">
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:background="#fff"
+            android:orientation="vertical"
+            >
+
+            <TextView
+                android:id="@+id/textViewLati"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Latitude: "
+                />
+            <TextView
+                android:id="@+id/textViewLongi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Latitude: "
+                />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:gravity="right">
+            <Button
+                android:id="@+id/btnBack"
+                android:layout_alignParentRight="true"
+                android:layout_width="wrap_content"
+                android:background="@drawable/ic_action_logout"
+                android:layout_marginVertical="5dp"
+                android:layout_height="wrap_content" />
+
+
+        </LinearLayout>
+
+
+        <android.support.v7.widget.CardView
+            app:cardElevation="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:layout_alignParentBottom="true"
+
+            >
+
+
+            <LinearLayout
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:orientation="horizontal"
+                android:layout_marginHorizontal="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.github.glomadrian.materialanimatedswitch.MaterialAnimatedSwitch
+                    android:id="@+id/location_switch"
+                    android:layout_marginTop="12dp"
+                    android:layout_width="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_weight="3"
+                    android:layout_height="wrap_content"
+                    app:icon_release="@drawable/ic_location_off"
+                    app:icon_press="@drawable/ic_location_on"
+                    app:base_release_color="@color/ballReleaseColor"
+                    app:base_press_color="@color/basePressColor"
+                    app:ball_release_color="@color/ballReleaseColor"
+                    app:ball_press_color="@android:color/white"
+                    />
+
+                <Button
+                    android:id="@+id/btnBusInfo"
+                    android:layout_weight="7"
+                    android:text="Bus Info"
+                    android:backgroundTint="@color/colorAccent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <Button
+                    android:id="@+id/btnLogout"
+                    android:layout_weight="7"
+                    android:text="LOG OUT"
+                    android:backgroundTint="#BDBDBD"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+
+        </android.support.v7.widget.CardView>
+
+
+    </RelativeLayout>
+
+
+
+
+</fragment>
